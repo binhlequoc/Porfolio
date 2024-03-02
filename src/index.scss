@@ -1,0 +1,17 @@
+.btn {
+  &--gradient {
+    background: linear-gradient(black, black) padding-box,
+      linear-gradient(135deg, #ffb800, #f3269c) border-box;
+    border: 2px solid;
+    transition: 300ms;
+    &:hover {
+      border: 2px solid transparent;
+    }
+  }
+}
+
+.name {
+  background: linear-gradient(135deg, #ffb800, #f3269c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
