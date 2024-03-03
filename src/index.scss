@@ -1,3 +1,5 @@
+$main-gradient: linear-gradient(135deg, #ffb800, #f3269c);
+
 .btn {
   &--gradient {
     background: linear-gradient(black, black) padding-box,
@@ -14,4 +16,36 @@
   background: linear-gradient(135deg, #ffb800, #f3269c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.hide-intro {
+  transition: 1s ease-in-out;
+  transform: translateX(-50%) translateY(-90%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.side-bar {
+  transform: translateY(-50%) translateX(-20px);
+  top: 50%;
+  transition: 500ms;
+  transition-delay: 1s;
+  visibility: hidden;
+  opacity: 0;
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-50%) translateX(0px);
+  }
+  &__btn {
+    width: fit-content;
+    height: fit-content;
+    transition: 300ms ease;
+    background-size: cover;
+    &--active {
+      background: $main-gradient;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 }
